@@ -19,9 +19,89 @@
       color: #e75480;
       text-shadow: 2px 2px #ffc0cb;
     }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .message-box {
+      background-color: #fff;
+      border: 2px solid #e75480;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 500px;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      color: #444;
+      text-align: left;
+    }
+
+
+    .flower {
+      width: 400px;
+      position: fixed;
+      bottom: 20;
+      z-index: 10;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+
+    .flower-left {
+      left: 0;
+      transform: rotate(-15deg);
+    }
+
+    .flower-right {
+      right: 0;
+      transform: rotate(15deg);
+    }
+
+    .below-image {
+      margin-top: 30px;
+      width: 60%;
+      max-width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+
+
   </style>
 </head>
+
 <body>
-  <h1>🎉 Happy Birthday Lily! 🎂</h1>
+  <div class="container">
+      <h1>🎉 Happy Birthday Lily! 🎂</h1>
+
+      <div class="message-box">
+        <p>Dear Lily,</p>
+        <p>You make the world brighter just by being in it. I hope this birthday brings you as much joy as you bring me every day. 💗</p>
+        <p>Love,<br>Tim</p>
+      </div>
+
+      <!-- <img src="images/FullSizeRender.jpg" alt="A moment with Lily" class="below-image"> -->
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    setTimeout(() => {
+      confetti({
+        particleCount: 250,
+        spread: 150,
+        origin: { y: 0.6 }
+      });
+    }, 500);
+  </script>
+
+<img src="images/BabyBreath1.png" alt="Flower Left" class="flower flower-left">
+<img src="images/BabyBreath2.png" alt="Flower Right" class="flower flower-right">
+
+
 </body>
 </html>
